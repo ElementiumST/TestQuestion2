@@ -1,0 +1,23 @@
+<resources>
+    <string name="server_url">https://wowowcleaner.com</string>
+    <string name="app_name">TestQuestion</string>
+    <string name="go_to_next_screen">Go to next screen</string>
+    <string name="show_custom_alert">Show custom alert</string>
+    <string name="loading">Loading…</string>
+    <string name="lottie_animation">Lottie animation</string>
+    <string name="start_animation">Start Animation</string>
+    <string name="stop_animation">Stop Animation</string>
+    <string name="hide_show_animation">Hide / Show Animation</string>
+    <string name="fist">Fist</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="fourth">Fourth</string>
+    <string name="close">Close</string>
+    <string name="random_value">Random value</string>
+    <string name="random_value_2">Random value 2</string>
+    <string name="randomize_value">Randomize value</string>
+    <string name="back">back</string>
+    <string name="random_loading_title">Random value</string>
+    <string name="random_loading_2_title">Random value 2</string>
+    <string name="load_data_from_server">Load Data from server...</string>
+</resources>

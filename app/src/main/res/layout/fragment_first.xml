@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.first.view.FirstFragment">
+
+    <include
+        android:id="@+id/progressBarPart"
+        layout="@layout/part_load_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AnimationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+
+        <TextView
+            android:id="@+id/lottieTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/lottie_animation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lottieTitle"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie_animation.json"
+            app:lottie_loop="true" />
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            android:dividerPadding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+            app:layout_constraintStart_toEndOf="@+id/lottieAnimationView"
+            app:layout_constraintTop_toTopOf="@+id/lottieAnimationView">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/startAnimation"
+                android:layout_width="match_parent"
+                android:text="@string/start_animation"
+                style="@style/MinorButton"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/stopAnimation"
+                android:layout_width="match_parent"
+                android:text="@string/stop_animation"
+                style="@style/MinorButton"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/changeAnimationShowState"
+                android:layout_width="match_parent"
+                android:text="@string/hide_show_animation"
+                style="@style/MinorButton"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/AlertContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/showAlertButton"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/show_custom_alert" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/nextScreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.02">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goToNextScreen"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/go_to_next_screen" />
+    </FrameLayout>
+</LinearLayout>

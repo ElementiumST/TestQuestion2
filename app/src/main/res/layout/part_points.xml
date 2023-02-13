@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/fourthGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/firsGuideLine"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/firsGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/secondGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.36" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/thirdGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fourthGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <io.stark.testquestion.feature.first.view.PointView
+        android:id="@+id/firstPointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/firsGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/firsGuideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pointDescription="@string/fist"
+        app:pointLightColor="@color/blue"
+        app:pointDrawable="@drawable/point_first_shape" />
+
+    <io.stark.testquestion.feature.first.view.PointView
+        android:id="@+id/secondPointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/secondGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/secondGuideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pointDescription="@string/second"
+        app:pointLightColor="@color/purple"
+        app:pointDrawable="@drawable/point_second_shape" />
+
+    <io.stark.testquestion.feature.first.view.PointView
+        android:id="@+id/thirdPointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/thirdGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/thirdGuideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pointDescription="@string/third"
+        app:pointLightColor="@color/pink"
+        app:pointDrawable="@drawable/point_third_shape" />
+
+    <io.stark.testquestion.feature.first.view.PointView
+        android:id="@+id/fourthPointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/fourthGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/fourthGuideLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pointDescription="@string/fourth"
+        app:pointLightColor="@color/dark_purple"
+        app:pointDrawable="@drawable/point_fourth_shape" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
